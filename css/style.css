@@ -16,6 +16,10 @@ html,
 body {
   font-family: 'Poppins', sans-serif;
   color: #111;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -394,5 +398,56 @@ section.home {
   .services .service {
     padding: 20px 40px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  footer {
+    margin-top: auto; /* Push the footer to the bottom */
+  }
+}
+
+/* Ensure the page takes at least 100% height */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the content section grows to take up remaining space */
+section {
+  flex: 1;
+  padding-bottom: 40px; /* Space before footer */
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 40px; /* Space between the footer and the content above */
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+footer .container {
+  width: 100%;
+  max-width: 1200px; /* Max width for the footer */
+  margin: 0 auto; /* Center the content */
+  padding: 0 20px; /* Padding for left/right spacing */
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+  footer {
+    margin-top: auto; /* Ensures footer stays at the bottom */
+  }
+
+  footer .container {
+    padding: 0 15px; /* Smaller padding on mobile */
   }
 }
